@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= "Произошла ошибка !"
+  h2= "500"
+  pre #{error.stack}

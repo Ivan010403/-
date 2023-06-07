@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+    <article>
+        <table align="center">
+            <tr>
+                <th>Имя файла</th>
+                <th>Идентификатор</th>
+                <th>Дата обработки</th>
+            </tr>
+            <tbody>
+            each row in processed_files ? processed_files : []
+                <tr>
+                    <td>
+                        <a href="/data/#{row.id}">#{row.filename}</a>
+                    </td>
+                    <td>
+                        #{row.id}
+                    </td>
+                    <td>
+                        #{row.processed}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <article>
+        <table align="center">
+            <tr>
+                <th>Date</th>
+                <th>Rain</th>
+                <th>wind_speed</th>
+                <th>temperature</th>
+
+            </tr>
+            <tbody>
+            {% for row in processed_files %}
+                <tr>
+                    <td>
+                        {{row[0]}}
+                    </td>
+                    <td>
+                        {{row[1]}}
+                    </td>
+                    <td>
+                        {{row[4]}}
+                    </td>
+                    <td>
+                        {{row[2]}}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+
+{% endblock %}

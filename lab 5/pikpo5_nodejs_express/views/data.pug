@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    <article>
+        <table align="center">
+            <tr>
+                <th>Размер</th>
+                <th>Тип</th>
+            </tr>
+            <tbody>
+            each row in processed_data ? processed_data : []
+                <tr>
+                    <td>
+                        #{row.LKG}
+                    </td>
+                    <td>
+                        #{row.target}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
